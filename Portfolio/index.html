@@ -275,13 +275,13 @@
     <footer class="footer">
         <div class="footer-text">
             <p>Copyright &copy; 2023 by Priyanka | All Rights Reserved.</p>
-            <span class="animate scroll" style="--i:1;"></span>
+            <!-- <span class="animate scroll" style="--i:1;"></span> -->
 
         </div>
 
         <div class="footer-iconTop">
             <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
-            <span class="animate scroll" style="--i:3;"></span>
+            <!-- <span class="animate scroll" style="--i:3;"></span> -->
 
         </div>
     </footer>
@@ -296,8 +296,7 @@
             var contact = document.getElementById('number').value;
             var Subject = document.getElementById('subject').value;
             var message = document.getElementById('msg').value;
-            
-
+            if(name!= "" && email!="" && contact!="" && Subject!="" && message!="")
             Email.send({
                 SecureToken : "d0099561-273e-4b25-8867-894f6181c44a",
                 To : 'priyankasingh8568@gmail.com',
@@ -314,8 +313,12 @@
                 }
             }
             );
-
+            else if (name== "" || email=="" || contact=="" || Subject=="" || message==""){
+                swal("Enter all fields to continue", "Fill all data", "warning");
+            }
+            else{
             this.form.reset();
+            }
         })
     </script>
     <script src="js/script.js"></script>
