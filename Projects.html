@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #081b29;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+    
+            header {
+                background-color: #112e42;
+                color: #fff;
+                padding: 20px;
+            }
+    
+            h1 {
+                color: #fff;
+                font-size: 36px;
+            }
+
+            h2{
+                color: #fff;
+                padding: 10px;
+            }
+
+            h3{
+                color: #fff;
+                text-align: left;
+                padding: 10px;
+            }
+    
+            .container {
+                max-width: 1000px;
+                margin: 20px auto;
+                background-color:#112e42;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            }
+    
+            p {
+                font-size: 18px;
+                line-height: 1.6;
+                text-align: left;
+                color: whitesmoke;
+                text-align: justify;
+    
+            }
+
+            img {
+                align-items: center;
+            }
+    
+            a {
+                text-decoration: none;
+                color: #00abf0;
+                font-weight: bold;
+            }
+    
+            .animate {
+                position: relative;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                color: #00abf0;
+                font-weight: bold;
+            }
+    
+             @media (max-width: 600px) {
+                header {
+                    padding: 10px;
+                }
+                h1 {
+                    font-size: 24px;
+                    color: #112e42;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+        <h1>Projects</h1>
+        </header>
+        <div class="container">
+            <h1>1. Simple File Manager Using AWS Services</h1>
+            <h2>Technical Description</h2>
+            <p>
+                The Simple File Manager solution is a user-friendly web-based file management platform. 
+                A custom VPC with dual availability zones hosts Elastic File System (EFS) instances for distributed storage. 
+                The web app, built using Python, HTML, and JavaScript, empowers users to upload, create, and delete files, with changes immediately synced to EFS. 
+                CloudFront and S3 ensure global distribution of web app resources, linked via API Gateway. 
+                AWS Cognito ensures secure authentication, while a CloudFormation template orchestrates infrastructure deployment. 
+                This cohesive setup offers a seamless experience, combining modern technologies for efficient and secure file management via a simple web interface.
+            </p>
+            <h2>Architecture</h2>
+            <img src="images/SimpleFileManager.jpg" alt="">
+            <h2>Web Application Development</h2>
+            <p>
+                The core of the user experience was built using a combination of Python, HTML, and JavaScript. 
+                The resulting web application enables users to perform various file operations, including uploading, creation, and deletion.
+                These actions are synchronized with the EFS instances.
+            </p>
+            <h3>Home Page
+                <p><img title="Home Page" src="images/Homepage.jpg" alt=""></p>
+            </h3>
+            <h3>Login Page           
+                <p><img title="Login Page" src="images/LoginPage.jpg" alt=""></p>
+            </h3>
+        </div>
+
+        <div class="container">
+            <h1>2. AWS EKS High-Availability Deployment for Interdependent Applications</h1>
+            <h2>Problem Statement</h2>
+            <p>
+                The software package comprises two components, A and B, which are tightly coupled and cannot be run on separate servers due to performance issues. 
+                Furthermore, each component of A and B cannot be colocated on the same server. To address these constraints, the solution aims to deploy both components on Kubernetes with three instances to ensure high availability and handle the significant workload.
+            </p>
+            <h2>Solution Approach</h2>
+            <p>
+                The project will utilize AWS EKS, leveraging a pre-existing EKS cluster with three nodes, each in a distinct availability zone. 
+                To maintain efficient utilization of resources & adhere to the vendor's restrictions, we have containerized applications A and B.
+            </p>
+
+            <h2>PROMETHEUS AND GRAFANA</h2>
+            <h3>Prometheus
+                <p><img title="Prometheus" src="images/prometheus.jpg" alt=""></p>
+            </h3>
+            <h3> Working on LoadBalancer
+                <p><img title="LoadBalancer" src="images/EKSLoadBalancer.jpg" alt=""></p>
+            </h3>
+            <h3>Grafana 
+                <p><img title="Grafana Page" src="images/Grafana.jpg" alt=""></p>
+            </h3>
+        </div>
+        <div class="container">
+            <h1>3. Automation with Terraform </h1>
+            <p>
+                A real-world challenging scenario of codifying infrastructure and provisioning it in the Azure cloud.
+            </p>
+            <iframe src="https://drive.google.com/file/d/1AP9jcJl5rOO6Za-3FU-uPsS25L46MBVA/preview" width="850" height="500" allow="autoplay"></iframe>
+        </div>
+        <div class="container">
+            <h1>4. Automation with Terraform and Ansible </h1>
+            <h2> Technical Description</h2>
+            <p>
+                Experience streamlined infrastructure management with our project combining Ansible and Terraform.
+                From partitioning disks to configuring load-balanced websites.
+                It seamlessly manages user creation, file modifications, provisioning, and post-deployment validation, ensuring a reliable and consistent infrastructure deployment experience.
+            </p>
+            <iframe src="https://drive.google.com/file/d/1TuqesBA3pgyhtg2qGqbaz_7UghCcLjGm/preview" width="850" height="500" allow="autoplay"></iframe>
+            <h3>
+                configuration validation
+            </h3>
+            <iframe src="https://drive.google.com/file/d/1TuqesBA3pgyhtg2qGqbaz_7UghCcLjGm/preview" width="850" height="480" allow="autoplay"></iframe>
+        </div>
+        <div class="container">
+            <h1>5. Designing Flexible CI/CD Pipeline using GitLab and Docker</h1>
+            <h2>Technical Description</h2>
+            <p>
+                The goal of the project is to design a pipeline that can handle application and manage the entire software development process, starting from code commit to deployment. 
+                GitLab's built-in CI/CD pipelines and Docker's containerization technology are used to achieve this objective. 
+                The pipeline is designed to be scalable, reliable, and efficient, streamlining the software development process. 
+                By integrating CI/CD with GitLab and Docker, we can create, test, and deploy their applications quickly and efficiently, resulting in high-quality software delivered to users faster.
+            </p>
+            <h2>Architecture
+            </h2>
+            <img src="images/CICD Architecture.jpg">
+            <h2>GitLab Runner CI/CD Pipeline</h2>
+            <img src="images/Gitlab.jpg" width="1000" height="500">
+        </div>
+        
+    </body>
+</html>
